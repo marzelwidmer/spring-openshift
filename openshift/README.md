@@ -51,3 +51,9 @@ oc new-app  -f https://raw.githubusercontent.com/openshift/origin/master/example
     -p JENKINS_IMAGE_STREAM_TAG=jenkins-blueocean:latest \
     -p MEMORY_LIMIT=2Gi
 ```
+
+
+
+```
+oc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/jboss-image-streams.json
+```
