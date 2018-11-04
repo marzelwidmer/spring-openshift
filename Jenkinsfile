@@ -1,29 +1,18 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.6-jdk-8-alpine'
-      args '-v "$PWD":/usr/src/app'
+    agent none
+    stages {
+        stage('mvn') {
+            agent { docker 'maven:3.3.9' }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+        stage('docker') {
+            agent any
+            steps {
+                sh 'docker --version'
+                sh 'docker images'
+            }
+        }
     }
-
-  }
-  stages {
-    stage('Initialize') {
-      steps {
-        sh '''echo PATH = ${PATH}
-echo M@_HOME = ${M2_HOME} 
-mvn clean'''
-      }
-    }
-    stage('Build') {
-      steps {
-        sh 'mvn -Dmaven.test.falure.ignore=true install'
-      }
-    }
-    stage('Report') {
-      steps {
-        junit 'target/surefire-reports/** /*.xml'
-        archiveArtifacts 'target/*.jar'
-      }
-    }
-  }
 }
