@@ -1,3 +1,22 @@
-##!/bin/sh
-#MAVEN_VERSION=3.5.4
-#wget http://repo1.maven.org/maven2/org/apache/maven/apache-maven/$APP_VERSION/apache-maven-$APP_VERSION-bin.zip
+#!/bin/bash
+
+set -e
+
+echo "---> Restore build artifacts"
+if [ "$(ls /tmp/artifacts/.m2 2>/dev/null)" ]; then
+    mv /tmp/artifacts/.m2 $HOME
+fi
+
+echo "---> Installing application source"
+cp -Rf /tmp/src/. ./
+
+echo "---> Building Spring Boot application from source"
+echo "--> # MVN_ARGS = $MVN_ARGS"
+if [ -f "mvnw" ]; then
+  ./mvnw clean install $MVN_ARGS
+else
+  mvn clean install $MVN_ARGS
+fi
+
+# Fix source directory permissions
+fix-permissions ./
