@@ -1,2 +1,3 @@
-MAVEN_ARGS=--settings=configuration/settings.xml
+#MAVEN_ARGS=--settings=configuration/settings.xml
+MVN_ARGS=--settings=configuration/settings.xml
 insecure-skip-tls-verify=true
