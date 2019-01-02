@@ -2,4 +2,4 @@
 MVN_ARGS=--settings=configuration/settings.xml
 insecure-skip-tls-verify=true
 insecure-registry=true
- 
+SKIP_TLS=true
