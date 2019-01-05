@@ -1,5 +1,5 @@
-#MAVEN_ARGS=--settings=configuration/settings.xml
-MVN_ARGS=--settings=configuration/settings.xml
+MAVEN_ARGS=--settings=configuration/settings.xml -Dhttps.protocols=TLSv1.2 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+MVN_ARGS=--settings=configuration/settings.xml -Dhttps.protocols=TLSv1.2 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 insecure-skip-tls-verify=true
 insecure-registry=true
 SKIP_TLS=true
