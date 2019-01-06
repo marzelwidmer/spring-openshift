@@ -147,7 +147,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>https://repo1.maven.apache.org/maven2</url>
+                    <url>https://repo.maven.apache.org/maven2</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -156,7 +156,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>https://repo1.maven.apache.org/maven2</url>
+                    <url>https://repo.maven.apache.org/maven2</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -189,6 +189,6 @@
 
     </profiles>
     <activeProfiles>
-        <activeProfile>insecurecentral</activeProfile>
+        <activeProfile>securecentral</activeProfile>
     </activeProfiles>
 </settings>
