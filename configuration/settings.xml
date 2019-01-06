@@ -150,9 +150,9 @@
                     <url>https://repo.maven.apache.org/maven2</url>
                     <releases>
                         <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
                     </releases>
-                    <updatePolicy>always</updatePolicy>
-                    <checksumPolicy>warn</checksumPolicy>
                 </repository>
             </repositories>
             <pluginRepositories>
