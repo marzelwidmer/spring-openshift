@@ -151,6 +151,8 @@
                     <releases>
                         <enabled>true</enabled>
                     </releases>
+                    <updatePolicy>always</updatePolicy>
+                    <checksumPolicy>warn</checksumPolicy>
                 </repository>
             </repositories>
             <pluginRepositories>
@@ -170,7 +172,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>http://repo1.maven.apache.org/maven2</url>
+                    <url>http://repo.maven.apache.org/maven2</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -179,7 +181,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>http://repo1.maven.apache.org/maven2</url>
+                    <url>http://repo.maven.apache.org/maven2</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
